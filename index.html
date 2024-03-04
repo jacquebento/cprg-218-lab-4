@@ -4,36 +4,115 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="/styles/reset.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/styles/reset.css"> -->
   <link rel="stylesheet" type="text/css" href="/styles/fonts.css">
   <link rel="stylesheet" type="text/css" href="/styles/global.css">
-  <link rel="stylesheet" type="text/css" href="styles/lab_four_starter.css">
-  <title>Common Website Features</title>
+  <!-- <link rel="stylesheet" type="text/css" href="styles/lab_four_starter.css"> -->
+  <title>Paris 2024 Olympics Information</title>
 </head>
+
 <body>
+
   <section class="hero-container">
-    <!-- Remove and add hero banner HTML -->
-    <div class="remove-assignment-content">
-      <h1>Hero Banner</h1>
+    <img id="hero-img" src="assets/hero2med.jpeg" alt="Paris portrait">
+    <div id="hero-msg">
+      <h1 class="home-title">Paris 2024 Olympics</h1>
+      <h2>A L L &nbsp Y O U &nbsp N E E D &nbsp T O &nbsp K N O W</h2>
     </div>
   </section>
-  <section class="container content-container">
-    <!-- Remove and add content HTML -->
-    <div class="remove-assignment-content">
-      <h1>Content</h1>
+
+  <section class="content-container">
+    
+
+    <div class="content-info">
+      <div class="text">
+        <h3>Dates</h3>
+        <p>26 July to 11 August</p>
+        <h3>Opening cerimony</h3>
+        <p>The opening ceremony of the Summer Olympic Games will take place on the evening of July 26, 2024 on the banks of the River Seine, ending in the Jardins du Trocadéro, in Paris, France.</p>
+        <a class='content-button' href="index.html">Learn more</a>
+      </div>
+        
     </div>
-  </section>
-  <section class="container accordion-container">
-    <!-- Remove and add accordion HTML -->
-    <div class="remove-assignment-content">
-      <h1>Accordion</h1>
+
+    <div class="content-image">
+      <img src="assets/content.jpeg" alt="Olympic Simbol">
     </div>
+
   </section>
-  <section class="footer-container">
-    <!-- Remove and add footer HTML -->
-    <div class="remove-assignment-content">
-      <h1>Footer</h1>
+
+
+<section class="accordion-container">
+    <button class="accordion">Venues</button>
+    <div class="panel">
+      <p>Most of the Olympic events will be held in the city of Paris and its metropolitan region, including the neighbouring cities of Saint-Denis, Le Bourget, Nanterre, Versailles, and Vaires-sur-Marne.</p>
     </div>
-  </section>
+    
+    <button class="accordion">Sports</button>
+    <div class="panel">
+      <p>In accordance with the current rules of the International Olympic Committee, which have been in force since 2017, the program of the Summer Olympics consists of 28 mandatory "core" sports that persist between Games and a maximum of six optional sports that can be added for each edition of the Games.</p>
+    </div>
+    
+    <button class="accordion">Medals</button>
+    <div class="panel">
+      <p>Paris 2024 president Tony Estanguet unveiled the Olympic and Paralympic medals for the Games in February 2024, which on the obverse featured embedded hexagon-shaped tokens of scrap iron that had been taken from the original construction of the Eiffel Tower, with the Games logo engraved into it.</p>
+    </div>
+</section>
+
+    
+
+<footer>
+    <div class="information">
+        <h2>Information</h2>
+        <p>This is not the official website</p>
+        
+    </div>
+
+    <div class="links">
+        <h2>Links</h2>
+        <a href=""> Privacy Policy</a><br><br>
+        <a href=""> Terms of Use</a><br><br>
+        <a href=""> Accessibility</a><br><br>
+        <a href=""> <i class='fab fa-facebook-f'></i></a>
+        <a href=""> <i class="fa fa-instagram"></i></a>
+    </div>
+    
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.764660951559!2d2.2875026!3d48.8626979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66ffb666721a5%3A0x8dbf34b77b272395!2sPl.%20du%20Trocad%C3%A9ro%20et%20du%2011%20Novembre%2C%20Paris%2C%20Fran%C3%A7a!5e0!3m2!1spt-BR!2sca!4v1708997745313!5m2!1spt-BR!2sca" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <p class="copyright"><span>&copy;</span> <span id="y"></span>  Jacqueline Bento  ▪ CPRG 218 Project ▪ <span id="date"></span> </p>
+</footer>
+
+
 </body>
+
+<script>
+
+    // accordion 
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+// show the year in the footer
+let date =  new Date().getFullYear();
+document.querySelector("#date").innerHTML = date;
+
+
+    </script>
+   <script src="https://kit.fontawesome.com/3fe62ce495.js" crossorigin="anonymous"></script>
 </html>
